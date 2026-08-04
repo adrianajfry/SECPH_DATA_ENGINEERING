@@ -1,0 +1,5 @@
+Driver	Total Rides	Total Distance (km)	Total Fare (RM)
+Ali	3		37.50			71.75
+Mei	2		15.20			35.50
+Ravi	3		19.50			42.75
+Sara	2		20.50			40.50
