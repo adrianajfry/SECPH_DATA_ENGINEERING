@@ -1,0 +1,7 @@
+This is File Manipulation Activity
+Let's practice string manipulation
+this line should be all capital letters
+THIS LINE SHOULD BE ALL SMALL LETTERS
+This line will be tested for isalpha
+this line will be tested for islower
+That's the end. Thank youuu
