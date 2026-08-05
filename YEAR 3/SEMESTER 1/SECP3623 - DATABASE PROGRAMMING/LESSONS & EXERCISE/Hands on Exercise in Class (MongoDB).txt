@@ -1,0 +1,75 @@
+Hands on Exercise in Class (MongoDB Advanced Operations)	--------------------------------------------------------------
+6.db.orders.find({status:{$in:["PENDING", "FAILED"]}})
+
+-----------------------------------------------------
+7. Retrieve how many orders exists for each status. 
+
+Idea: 
+- Groups orders by status
+
+Answer:
+db.orders.aggregate([{$group:{_id: "$status", count:{$sum:1}}}])
+-------------------------------------------------------
+8. Retrieve highest order amount per city. 
+
+Idea:
+-Use $max for highest value
+
+Answer:
+db.orders.aggregate([{$group:{_id:"$city, maxAmount:{$max:"$amount"}}}])
+--------------------------------------------------------------------
+9. Calculate average order in each city
+Idea:
+-Use $avg to calculate average
+
+Answer:
+db.orders.aggregate([{$group:{_id:"$city", avgAmount:{$avg:"$amount"}}}])
+-----------------------------------------------------------------------
+10. Sort the cities in DESC by total sales
+Idea:
+-group sales by city
+- sort the output in DESC
+
+Answer:
+db.orders.aggregate([{$group:{_id:"$city", totalSales:{$sum: "$amount"}}}, {$sort:{totalSales:-1}}])
+
+ -------------------------------------------------
+11. Count Customers whose name begin with 'A'
+Answer:
+db.orders.aggregate([{$match:{customer:{$regex:"^A"}}}]),
+{$count:"ordersbyAcustomers"}])
+-----------------------------------------------------
+12. Count orders from cities starting with "K"
+Answer:
+db.orders.aggregate([{$match:{city:{$regex:"^K"}}}, {$count:"orderfromKcities"}])
+------------------------------------------------------
+13. Calculate total sales of PAID orders for customers names ends with "i"
+Answer:
+db.orders.aggregate([{$match:{customer:{$regex:"i$"}, status: "PAID"}}, {$group:{_id:"$customer", totalSales:{$sum:"$amount"}}}])
+
+Idea:
+-$match : i$ (ending with i), status: PAID
+-group by customers
+-------------------------------------------------------
+14. Count total quantity sold per product (type/sku)
+
+db.orders.aggregate([{$unwind:"$items"},{$group:{_id:"$items.type", totalQty:{$sum:"$items.qty"}}}])
+
+Idea:
+- $unwind : group by array fields, aggregate per array
+(usually it is mandatory to use $unwind as its acts as flattening step so that can process the element separately)
+------------------------------------------------------------
+15. Retrieve orders that contain SKU/TYPE "A1" with a quantity of 2 or more. 
+
+- recall documents
+
+db.orders.find({}, {_id:0, orderId: 1, customer: 1, items:1})
+
+db.orders.find({"items.sku":"A1"})
+db.orders.find({"items.qty":{$gte: 2}})
+
+db.orders.find({items:{$elemMatch:{sku:"A1", qty: {$gte: 2}}}})
+
+Idea:
+-$elemMatch 
+- gte and gt : gte = greater than and equals to, gt = greater than
