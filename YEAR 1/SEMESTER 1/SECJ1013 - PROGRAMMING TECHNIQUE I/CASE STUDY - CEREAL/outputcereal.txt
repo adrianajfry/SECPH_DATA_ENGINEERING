@@ -1,0 +1,16 @@
+Type		Carbohydrate		 Protein		   Fat
+========	============		 =======		   ===
+Cereal A	707.28%(High)             417.94%(High)             445.14%(High)
+Cereal B	91.09%(High)             851.95%(High)             86.55%(High)
+Cereal C	691.20%(High)             450.08%(High)             778.99%(High)
+Cereal D	522.42%(High)             707.28%(High)             185.47%(High)
+Cereal E	144.67%(High)             594.75%(High)             1051.02%(High)
+Cereal F	618.87%(High)             1269.88%(High)             642.98%(High)
+Cereal G	509.02%(High)             803.72%(High)             581.15%(High)
+Cereal H	200.93%(High)             369.71%(High)             692.44%(High)
+Cereal I	500.99%(High)             1028.76%(High)             877.91%(High)
+Cereal J	790.33%(High)             626.90%(High)             593.52%(High)
+The ten cereal types produce an average %DV of:
+Carbohydrate: 494.53%(Moderate)
+Protein: 737.22%(High)
+Fat: 614.45%(High)
