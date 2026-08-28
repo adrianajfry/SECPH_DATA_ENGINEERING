@@ -1,0 +1,981 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>programming technique page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/prism.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">˗ˏˋ ★ ˎˊ˗</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Assignments</a></li>
+					<li class="active"><a href="pt.html">SECJ1013</a></li>
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/adriana-jefri-86797a24b" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/adrianajfry04" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://www.instagram.com/lady.everlyn/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="http://www.youtube.com/@lady.everlyn" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Post -->
+				<section class="post">
+					<header class="major">
+						<span class="date">Welcome to</span>
+						<h1>PROGRAMMING<br />
+						TECHNIQUE</h1>
+						<p>coursework and summary for<br />
+						Programming Technique subject.</p>
+					</header>
+					<hr/>
+
+					<h2>Course Outline</h2>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Chapter</th>
+									<th>Topic</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td> Programming Problem-Solving.</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td> Elementary Programming.</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td> Control Structures.</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td> Functions.</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td> Array.</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td> Input & Output.</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td> Pointers.</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td> Structured Data.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<hr />
+
+					<h3>Assignment 1</h3>
+							<span class="image fit"><img src="images/assignment 1.draw io flowchart.png" alt="" /></span>
+							<hr/>
+
+							<h3>Exercise 2 : Set 1 - Post Test Loop</h3>
+							<div class="code-container">
+								<div class="code-wrapper">
+									<pre>
+										<code id="code" class="language-cpp">
+											/*exercise 1 : post-test loop*/
+		#include &ltiostream&gt
+		using namespace std;
+		int main()
+		{
+		int number, sum = 0, remainder;
+		cout&lt&lt"Enter a positive number : ";
+		cin>>number;
+		do {
+		remainder = number % 10;
+		sum = sum + remainder;
+		number = number / 10;
+		}while (number>0) ;
+		if (sum % 3 == 0 && sum % 4 == 0 && sum % 5 == 0) {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and divisible by 3, 4 & 5.";
+		}
+		else if (sum % 3 == 0 && sum % 4 != 0 && sum % 5 != 0) {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and divisible by 3.";
+		}
+		else if (sum % 3 != 0 && sum % 4 == 0 && sum % 5 != 0) {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and divisible by 4.";
+		}
+		else if (sum % 3 != 0 && sum % 4 != 0 && sum % 5 == 0) {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and divisible by 5.";
+		}
+		else if (sum % 3 == 0 && sum % 4 == 0 && sum % 5 != 0) {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and divisible by 3 & 4.";
+		}
+		else if (sum % 3 == 0 && sum % 4 != 0 && sum % 5 == 0) {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and divisible by 3 & 5.";
+		}
+		else if (sum % 3 != 0 && sum % 4 == 0 && sum % 5 == 0) {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and divisible by 4 & 5.";
+		}
+		else {
+		cout&lt&lt"Sum of digits is "&lt&ltsum&lt&lt" and not divisible by 3, 4 & 5.";
+		}
+		return 0;
+		}
+										</code>
+									</pre>
+								</div>
+							</div>
+						<hr/>
+
+				<h3>Exercise 2 : Set 1 - Pre Test Loop</h3>
+					<div class="code-container">
+						<div class="code-wrapper">
+							<pre>
+								<code id="code" class="language-cpp">
+									/*exercise 1 set 3 : pre-test loop*/
+#include &ltiostream&gt
+using namespace std;
+int main()
+{
+    int num1, num2, remainder, product = 1, i;
+    cout &lt&lt "Enter a positive number: ";
+    cin >> num1;
+    num2 = num1;
+    
+    for(i=num1;i>0;i=i/10) {
+        remainder = i % 10;
+        product = product *remainder;
+    }
+    
+    if (product % 4 == 0 && product % 5 == 0 && product % 7 == 0) {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and divisible by 4, 5 & 7.";
+    }
+    else if (product % 4 == 0 && product % 5 != 0 && product % 7 != 0) {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and divisible by 4.";
+    }
+    else if (product % 4 != 0 && product % 5 == 0 && product % 7 != 0) {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and divisible by 5.";
+    }
+    else if (product % 4 != 0 && product % 5 != 0 && product % 7 == 0) {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and divisible by 7.";
+    }
+    else if (product % 4 == 0 && product % 5 == 0 && product % 7 != 0) {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and divisible by 4 & 5.";
+    }
+    else if (product % 4 == 0 && product % 5 != 0 && product % 7 == 0) {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and divisible by 4 & 7.";
+    }
+    else if (product % 4 != 0 && product % 5 == 0 && product % 7 == 0) {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and divisible by 5 & 7.";
+    }
+    else {
+        cout&lt&lt"Product of digits is "&lt&ltproduct&lt&lt" and not divisible by 4, 5 & 7.";
+    }
+    return 0;
+}
+								</code>
+							</pre>
+						</div>
+					</div>
+				<hr/>
+				
+				<h3>Assignment 2</h3>
+				<div class="code-container">
+					<div class="code-wrapper">
+						<pre>
+							<code id="code" class="language-cpp">
+								#include &ltiostream&gt
+									#include &ltvector&gt
+									#include &ltcmath&gt
+									using namespace std;
+									int main() {
+										
+										int carprice, downpayment, loanterms, interestrate, region, balance, totalinterest, monthlyinstallment, months, principal, interest;
+										
+										do {
+											cout&lt&lt"Enter your car price : RM";
+											cin>>carprice;
+										} while (carprice &lt 22000);
+										
+										do {
+											cout&lt&lt"Enter your car downpayment (%) : ";
+											cin>>downpayment;
+										} while (downpayment &lt= 0);
+										
+										do {
+											cout&lt&lt"Enter loan terms (in years) : ";
+											cin>>loanterms;
+										} while (loanterms &lt= 3 || loanterms >10);
+										
+										do {
+											cout&lt&lt"Enter your car interest rate (%) : ";
+											cin>>interestrate;
+										} while (interestrate <3 || interestrate >9 );
+										
+									   balance = carprice - downpayment;
+									   months = loanterms * 12;
+									   totalinterest = balance * (interestrate/100) * loanterms;
+									   monthlyinstallment = (balance + totalinterest)/months;
+										
+									   cout&lt&lt"Select your region ; \n1 = SM (semenanjung) or 2 = SS (sabah & sarawak) ? ";
+									   cin>>region;
+									   
+									   if (region == 1 && region != 2) {
+										   monthlyinstallment = monthlyinstallment + (0.04 * monthlyinstallment);
+										   cout&lt&lt"Monthly installment are increased by 4%.";
+									   } else if (region != 1 && region == 2) {
+										   monthlyinstallment = monthlyinstallment + (0.08 * monthlyinstallment);
+										   cout&lt&lt"Monthly installment are increased by 8%.";
+									   }
+									   cout&lt&lt"\nMonthly installment : RM "&lt&lt monthlyinstallment &lt&lt ".";
+									   
+										return 0;
+									}	
+							</code>
+						</pre>
+					</div>
+				</div>
+			<hr/>
+
+			<h3>Exercise 3 (Function)</h3>
+				<div class="code-container">
+					<div class="code-wrapper">
+						<pre>
+							<code id="code" class="language-cpp">
+								/*pt exercise 3
+name : Nurul Adriana Binti Kamal Jefri
+matrics number : A23CS0258
+date : 17/12/2023*/
+#include &ltiostream&gt
+#include &ltstring&gt
+using namespace std;
+void dispStatus (int); 
+void getInput (int&, int&, int&, int&);
+void dispOutput (int);
+int calcAverage (int, int);
+    
+int main(){
+    int n, x=0, y=0, totalCase, newCase, totalDeath, totalRecovered, highest=-999;
+    string state, temp, higheststate;
+    char result;
+    
+    do {
+        cout&lt&lt"\n&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&ltDATA&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt\n";
+        cout&lt"Enter state : ";
+        getline(cin, state);
+        getInput (totalCase, newCase, totalDeath, totalRecovered);
+        n = totalCase + newCase - totalDeath - totalRecovered;
+        if (n > highest) {
+            highest=n;
+            higheststate=state;
+        } 
+        cout&lt&lt"\n&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&ltSUMMARY&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt\n";
+        cout&lt&lt"Active cases : " &lt&ltn&lt&lt "\n";
+        dispOutput (n); 
+        x = x+n;
+        y = y+1;
+        cin.ignore();
+        cout&lt&lt"\nPRESS &ltENTER&lt TO CONTINUE...";
+    } while (cin.get() == '\n');
+    calcAverage (x,y);
+    cout&lt&lt"&lt&lt&lt&lt&lt&lt&lt&lt&lt&ltACTIVE CASES&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt";
+    cout&lt&lt"\nTotal : "&lt&ltx;
+    cout&lt&lt"Highest : "&lt&lthighest&lt&lt"("&lt&lthigheststate&lt&lt")";
+    cout&lt&lt"\nAverage for "&lt&lty&lt&lt" state(s)"&lt&ltcalcAverage (x,y);
+    return 0;
+}
+
+void getInput (int &a, int &b, int &c, int &d) {
+    cout&lt&lt"Enter total case : ";
+    cin>>a;
+    cout&lt&lt"Enter new cases : ";
+    cin>>b;
+    cout&lt&lt"Enter total death : ";
+    cin>>c;
+    cout&lt&lt"Enter total recovered : ";
+    cin>>d;
+}
+
+void dispOutput (int n) {
+    dispStatus (n);
+}
+
+
+void dispStatus (int n) { 
+    if (n > 40) {
+        cout&lt&lt"Status of zone : RED.";     
+    } else if (n >= 21 && n &lt= 40) {
+        cout&lt&lt"Status of zone : ORANGE.";
+    } else if (n >= 1 && n &lt= 20) {
+        cout&lt&lt"Status of zone : YELLOW.";
+    } else if (n == 0) {
+        cout&lt&lt"Status of zone : GREEN.";
+    } else {
+        cout&lt&lt"Status of zone : GREEN.";
+    }
+}
+
+int calcAverage (int x, int y) {
+    int average = x/y;
+    return average;
+}
+
+
+							</code>
+						</pre>
+					</div>
+				</div>
+			<hr/>
+
+			<h3>Exercise for Input Output</h3>
+			<div class="code-container">
+				<div class="code-wrapper">
+					<pre>
+						<code id="code" class="language-cpp">
+							#include &ltiostream&gt
+								#include &ltiomanip&gt
+								#include &ltfstream&gt
+								using namespace std;
+								
+								void readFile(ifstream&, float[], int);
+								void computeC(float[], float[], int);
+								float average(float[]);
+								void grade(float[], char[], int &, int &, int &);
+								void writeFile(ofstream&, float[], float[], char []);
+								
+								int main () {
+									ifstream input("input.txt");
+									ofstream output("output.txt");
+									float F[8];
+									float C[8];
+									int m=0, countH=0, countM=0, countL=0;
+									char G[8];
+									readFile (input, F, m);
+									computeC (F, C, m);
+									cout &lt&lt "Average of the temperature in Celcius : ";
+									cout &lt&lt fixed &lt&lt showpoint &lt&lt setprecision(1) &lt&lt average (C) &lt&lt endl;
+									grade (C, G, countH, countM, countL);
+									cout &lt&lt "Number of high temperature :" &lt&lt countH &lt&lt endl;
+									cout &lt&lt "Number of medium temperature : " &lt&lt countM &lt&lt endl;
+									cout &lt&lt "Number of low temperature : " &lt&lt countL &lt&lt endl;
+									writeFile (output, F, C, G);	
+								}
+								
+								void readFile (ifstream& input, float F[], int m) {
+									float f;
+										if (!input.is_open()) {
+										cout&lt&lt"Terminating!";
+									} 	
+									while (!input.eof()) {
+										for (int i=0; i&lt8; i++) {
+											input &gt&gt f;
+											F[i]=f;
+											m = m+1;
+										}
+									} 
+								}
+								
+								void computeC (float F[], float C[], int m) {
+									for (int i = 0; i&lt8; i++) {
+										C[i] = (5.0/9.0) * (F[i] - 32);
+									}
+								}
+								
+								float average (float C[]) {
+									float sum = 0.0;
+									for (int i = 0; i&lt8; i++) {
+										sum += C[i];
+									} 
+									float ave = sum / 8.00;
+									return ave;
+								}
+								
+								void grade (float C[], char G[], int &x, int &countM, int &countL) {
+									for (int i = 0; i &lt 8; i++) {
+										if (C[i]>= 35) {
+											G[i] = 'H' ;
+											x += 1;
+										} else if (C[i]&lt35 && C[i]&gt=20) {
+											G[i] = 'M' ;
+											countM += 1;
+										} else if (C[i]&lt20) {
+											G[i] = 'L' ;
+											countL += 1;
+										}
+									}	
+								  }
+								
+								void writeFile (ofstream &output, float F[], float C[], char G[]) {
+									if (output.is_open()) {
+										output &lt&lt setw(15) &lt&lt "C(Celcius)" &lt&lt setw(15) &lt&lt "F(Farenheit)"  &lt&lt setw(15) &lt&lt  "Description" &lt&lt endl;
+										output &lt&lt setw(15) &lt&lt "==========" &lt&lt setw(15) &lt&lt "============"  &lt&lt setw(15) &lt&lt  "===========" &lt&lt endl;
+										for (int i = 0; i &lt 8; ++i) {
+											output &lt&lt fixed &lt&lt showpoint &lt&lt setprecision(2);
+											output &lt&lt setw(15) &lt&lt C[i];
+											output &lt&lt setw(15) &lt&lt F[i];
+											output &lt&lt setw(15) &lt&lt G[i] &lt&lt endl;
+										} output.close();
+									} else {
+										cout &lt&lt "Unable to open file for writing." &lt&lt endl;
+									}
+								}
+						</code>
+					</pre>
+				</div>
+			</div>
+		<hr/>
+
+		<h2>Project Case Study</h2>
+		<h3>Case study 1</h3>
+		<div class="code-container">
+			<div class="code-wrapper">
+				<pre>
+					<code id="code" class="language-cpp">
+						/* Group member :
+1. DAMIYA AINA BINTI BASIR ABD SHAMAD (A23CS0220)
+2. NURUL ADRIANA BINTI KAMAL JEFRI (A23CS0258)
+3. LUBNA AL HAANI BINTI RADZUAN (A23CS0107)
+
+Date :
+21 January 2024*/
+
+#include&ltiostream&gt
+#include&ltfstream&gt
+#include&ltstring&gt
+#include&ltiomanip&gt
+using namespace std;
+
+void calconvert(float carbo[], float protein[], float fat[]);
+void calDV(float carboDV[], float proteinDV[], float fatDV[]);
+void category(float carboDV[], float proteinDV[], float fatDV[], string level_carbo[], string level_protein[], string level_fat[]);
+string categoryAVG(float);
+int main()
+{
+	fstream infile("inputcereal.txt", ios::in );
+	fstream outfile("outputcereal.txt", ios::out);
+	string cerealname[10];
+	char cerealtype[10];
+	float carbo[10], protein[10], fat[10];
+	float carboDV[10], proteinDV[10], fatDV[10];
+	int nutrientchoice,level,num = 1;
+	float total_carbo = 0, total_protein = 0, total_fat = 0;
+	float average_carbo, average_protein, average_fat;
+	string level_carbo[10], level_protein[10], level_fat[10];
+	char choice;
+	string level_avgcarb, level_avgpro, level_avgfat;
+	
+	if(!infile)
+	{
+		cout&lt&lt"ERROR: Cannot open file\n";
+		exit(1);
+	} for(int i=0; i<10; i++) {
+		infile&gt&gtcerealname[i]&gt&gtcerealtype[i]&gt&gtcarbo[i]&gt&gtprotein[i]&gt&gtfat[i];
+	}
+	
+	do {
+		cout&lt&lt"1.Carbohydrate\n2.Protein\n3.Fat\n";
+		cout&lt&lt"Please enter your choice&gt&gt ";
+		cin&gt&gtnutrientchoice;
+		cout&lt&lt"\n1.Low\n2.Moderate\n3.High\n";
+		cout&lt&lt"Please enter your choice&gt&gt ";
+		cin&gt&gtlevel;
+		cout&lt&ltendl;
+	
+		calconvert(carbo, protein, fat);
+	
+		for(int i=0; i&lt10;i++) {
+		  carboDV[i]=carbo[i];
+		  proteinDV[i]=protein[i];
+		  fatDV[i]=fat[i];
+		}
+	
+		calDV( carboDV, proteinDV, fatDV);
+		category(carboDV, proteinDV, fatDV, level_carbo, level_protein, level_fat);
+	
+		for(int i=0; i&lt10;i++) {
+			total_carbo = total_carbo + carboDV[i];
+			total_protein = total_protein + proteinDV[i];
+			total_fat = total_fat + fatDV[i];
+		}
+	
+		average_carbo = total_carbo / 10;
+		average_protein = total_protein / 10;
+		average_fat = total_fat / 10;
+	
+		if(nutrientchoice==1) {
+			if(level == 1)
+			{
+				cout&lt&lt"List of cereal with low amount of carbohydrate:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "Low") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}
+			}
+			if(level == 2) {
+				cout&lt&lt"List of cereal with moderate amount of carbohydrate:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "Moderate") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}
+			}
+			if(level == 3) {
+				cout&lt&lt"List of cereal with high amount of carbohydrate:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "High") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}	
+				}
+			}
+		}
+		
+		if(nutrientchoice==2) {
+			if(level == 1) {
+				cout&lt&lt"List of cereal with low amount of protein:\n";
+				for(int i=0 ; i<10; i++) {
+					if(level_carbo[i] == "Low") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}
+			}
+			if(level == 2) {
+				cout&lt&lt"List of cereal with moderate amount of protein:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "Moderate") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}
+			}
+			if(level == 3) {
+				cout&lt&lt"List of cereal with high amount of protein:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "High") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}	
+			}
+		}
+		if(nutrientchoice==3) {
+			if(level == 1) {
+				cout&lt&lt"List of cereal with low amount of fat:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "Low") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}
+			}
+			if(level == 2) {
+				cout&lt&lt"List of cereal with moderate amount of fat:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "Moderate") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}
+			}
+			if(level == 3) {
+				cout&lt&lt"List of cereal with high amount of fat:\n";
+				for(int i=0 ; i&lt10; i++) {
+					if(level_carbo[i] == "High") {
+						cout&lt&ltnum&lt&lt". Cereal "&lt&ltcerealtype[i]&lt&ltendl;
+						num++;
+					}
+				}
+			}
+		 	level_avgcarb = categoryAVG(average_carbo);
+			level_avgpro = categoryAVG(average_protein);
+			level_avgfat = categoryAVG(average_fat);
+		}
+		cout&lt&lt"Choose again? Y/N >> ";
+		cin>>choice;
+	} while((choice == 'Y')||(choice == 'y'));
+	
+	outfile&lt&lt"Type\t\tCarbohydrate\t\t Protein\t\t   Fat\n";
+	outfile&lt&lt"========\t============\t\t =======\t\t   ===\n";
+	for(int i=0;i<10;i++) {
+		outfile&lt&lt"Cereal "&lt&ltcerealtype[i]&lt&lt"\t";
+		if (level_carbo[i] == "Moderate")
+		outfile&lt&ltfixed&lt&ltsetprecision(2)&lt&ltsetw(5)&lt&ltcarboDV[i]&lt&lt"%("&lt&ltlevel_carbo[i]&lt&ltleft&lt&ltsetw(10)&lt&lt")";
+	    else if (level_carbo[i] == "Low")
+		outfile&lt&ltfixed&lt&ltsetprecision(2)&lt&ltsetw(5)&lt&ltcarboDV[i]&lt&lt"%("&lt&ltlevel_carbo[i]&lt&ltleft&lt&ltsetw(15)&lt&lt")";
+		else
+		outfile&lt&ltfixed&lt&ltsetprecision(2)&lt&ltsetw(5)&lt&ltcarboDV[i]&lt&lt"%("&lt&ltlevel_carbo[i]&lt&ltleft&lt&ltsetw(14)&lt&lt")";
+		
+		if(level_protein[i] == "Moderate") {
+			outfile&lt&ltsetw(5)&lt&ltproteinDV[i]&lt&lt"%("&lt&ltlevel_protein[i]&lt&ltleft&lt&ltsetw(10)&lt&lt")";
+		} else if(level_protein[i] == "Low") {
+			outfile&lt&ltsetw(5)&lt&ltproteinDV[i]&lt&lt"%("&lt&ltlevel_protein[i]&lt&ltleft&lt&ltsetw(15)&lt&lt")";
+	    } else {
+			outfile&lt&ltsetw(5)&lt&ltproteinDV[i]&lt&lt"%("&lt&ltlevel_protein[i]&lt&ltleft&lt&ltsetw(14)&lt&lt")";
+	    }
+			outfile&lt&ltfatDV[i]&lt&lt"%("&lt&ltlevel_fat[i]&lt&lt")\n";
+	}
+	outfile&lt&lt"The ten cereal types produce an average %DV of:\n";
+	outfile&lt&lt"Carbohydrate: "&lt&ltaverage_carbo&lt&lt"%("&lt&ltlevel_avgcarb&lt&lt")\n";
+	outfile&lt&lt"Protein: "&lt&ltaverage_protein<<"%("&lt&ltlevel_avgpro&lt&lt")\n";
+	outfile&lt&lt"Fat: "&lt&ltaverage_fat&lt&lt"%("&lt&ltlevel_avgfat&lt&lt")\n";
+
+	infile.close();
+	outfile.close();
+	
+	return 0;
+}
+
+void calconvert(float carbo[], float protein[], float fat[]) {
+	for(int i=0; i&lt10; i++) {
+		carbo[i] = carbo[i]*28.35;
+		protein[i] = protein[i]*28.35;
+		fat[i] = fat[i]*28.35;
+	}
+}
+
+void calDV(float carboDV[], float proteinDV[], float fatDV[]) {
+    for(int i = 0; i &lt 10; i++) {
+        carboDV[i] = carboDV[i] / 300 * 100;
+        proteinDV[i] = proteinDV[i] / 50 * 100;
+        fatDV[i] = fatDV[i] / 65 * 100;
+    }
+}
+
+void category(float carboDV[], float proteinDV[], float fatDV[], string level_carbo[], string level_protein[], string level_fat[]) {
+    for(int i=0; i&lt10; i++) {
+        if (carboDV[i] &lt= 5)
+            level_carbo[i] = "Low";
+        else if ((carboDV[i] > 5) && (carboDV[i] &lt 20))
+            level_carbo[i] = "Moderate";
+        else
+            level_carbo[i] = "High";
+    }
+
+    for(int i=0; i<10; i++) {
+        if (proteinDV[i] &lt= 5)
+            level_protein[i] = "Low";
+        else if ((proteinDV[i] > 5) && (proteinDV[i] &lt 20))
+            level_protein[i] = "Moderate";
+        else
+            level_protein[i] = "High";
+    }
+
+    for(int i=0; i<10; i++) {
+        if (fatDV[i] &lt= 5)
+            level_fat[i] = "Low";
+        else if ((fatDV[i] > 5) && (fatDV[i] &lt 20))
+            level_fat[i] = "Moderate";
+        else
+            level_fat[i] = "High";
+    }
+}
+
+string categoryAVG(float avg) {	
+	string level;
+	
+	if (avg &lt= 5)
+		level= "Low";
+		
+	else if ((avg > 5) && (avg &lt 20))
+		level = "Moderate";
+		
+	else 
+		level= "High";
+		
+	return level;
+}
+					</code>
+				</pre>
+			</div>
+		</div>
+
+		<h3>Case study 3</h3>
+		<div class="code-container">
+			<div class="code-wrapper">
+				<pre>
+					<code id="code" class="language-cpp">
+						/* Group member :
+1. DAMIYA AINA BINTI BASIR ABD SHAMAD (A23CS0220)
+2. NURUL ADRIANA BINTI KAMAL JEFRI (A23CS0258)
+3. LUBNA AL HAANI BINTI RADZUAN (A23CS0107)
+
+Date :
+21 January 2024*/
+
+#include &ltiostream&gt
+#include &ltiomanip&gt
+#include &ltcstring&gt
+#include &ltfstream&gt
+
+using namespace std;
+
+//Function prototype list
+int readFile(const char*, float[][12], string[], int);
+int change(float[][12],int);
+float grandTotalSales(float[][12], int);
+float highestSale(float[][12], string[], string[], int, int&, int&);
+float lowestSale(float[][12], string[], string[], int, int&, int&);
+float totalMonthly(float[][12], int, int);
+int totalStores(float[][12], float[], int);
+
+int main()
+{
+	const int row = 5, col = 12;
+	int h1 = 0, h2 = 0, l1 = 0, l2 = 0;
+	float sales[row][col], storeAnn[5];
+	string store[row];
+	string month[12] = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+	
+	const char* file = "sales2014.dat";
+	const char* ofile = "Report Sales.txt";
+	
+	int read = readFile(file, sales, store, row); // Read input from file
+	
+	int changes = change(sales,row); // Change all input to real value
+	
+	float total = grandTotalSales(sales, row); // Calculate grand total
+	float avg = total / 12.0; // Calculate average of company annual sales
+	
+	float highest = highestSale(sales, store, month, row, h1, h2); // Find the highest monthly sales
+	
+	float lowest = lowestSale(sales, store, month, row, l1, l2); // Find the lowest monthly sales
+	
+	int totalS = totalStores(sales, storeAnn, row); // Calculate total sales for each store
+	
+	
+	fstream outfile(ofile, ios::out); // Opening output file
+	// Check output file can be opened or not
+	if (!outfile)
+		cout << "Error in opening output file" << endl;
+	else
+		cout << "Output file is opened successfully" << endl; 
+	
+	// Output for grand total and average
+	outfile << "Total of sales over all stores : RM ";
+	outfile << right << setw(10);
+	outfile << fixed << setprecision(2) << total << endl;
+	outfile << "Average sale per month : RM ";
+	outfile << right << setw(10);
+	outfile << fixed << setprecision(2) << avg << endl;
+	
+	// Output for the highest monthly sales
+	outfile << "\nThe highest sales :" << endl;
+	outfile << "-------------------" << endl;
+	outfile << "Store : " << store[h1] << endl;
+	outfile << "Month : " << month[h2] << endl;
+	outfile << "Sales : RM " << fixed << setprecision(2) << right << setw(10) << highest << endl;
+	
+	// Output for the lowest monthly sales
+	outfile << "\nThe lowest sales :" << endl;
+	outfile << "-------------------" << endl;
+	outfile << "Store : " << store[l1] << endl;
+	outfile << "Month : " << month[l2] << endl;
+	outfile << "Sales : RM " << fixed << setprecision(2) << right << setw(10) << lowest << endl;
+	
+	// Output for total sales for each month 
+	outfile << "\n\nTotal sales by month :" << endl << "Month" << setw(10) << "Sales" << endl << "-----" << setw(10) << "-----" << endl;
+	outfile << right;
+	for (int x = 0; x < 12; x++)
+	{
+		outfile << month[x] << "   RM " << fixed << setprecision(2) << setw(10) << totalMonthly(sales, x, row) << endl;
+	}
+	
+	// Output for the total annual sales for each store 
+	outfile << "\nTotal sales by store :" << endl << "Store" << setw(21) << "Total Sales" << endl << "-----" << setw(21) << "-----------" << endl;
+	for (int x = 0; x < row; x++)
+	{
+		outfile << left;
+		outfile << setw(14) << store[x] << "RM";
+		outfile << right;
+		outfile << setw(10) << fixed << setprecision(2) << storeAnn[x] << endl;
+	}
+	
+	// Output for the profitable stores
+	outfile << "\nProfitable stores :" << endl << "-----------------" << endl;
+	for (int x = 0; x < row; x++)
+	{
+		if (storeAnn[x] >= 600000)
+			outfile << store[x] << endl;
+	}
+	
+	outfile.close(); // Closing the output file
+	
+	return 0;
+}
+
+// Function to read input from input file
+int readFile(const char* file, float sales[][12],string store[],int row)
+{
+	fstream infile(file, ios::in);
+	
+	if (!infile)
+		cout << "Error in opening input file" << endl;
+	else
+		cout << "Input file is opened successfully" << endl; 
+
+	for (int x = 0; x < row; x++)
+	{
+		for (int y = 0; y< 12; y++)
+		{
+			infile >> sales[x][y];
+		}
+		getline(infile >> ws, store[x]);
+	}
+	
+	infile.close();
+	return row;
+}
+
+// Function to change each cell to real value(multiple of 1000)
+int change(float sales[][12], int row)
+{
+	for (int x = 0; x < row; x++)
+	{
+		for (int y = 0; y < 12; y++)
+		{
+			sales[x][y] = sales[x][y] * 1000.0;
+		}
+	}
+	return row;
+}
+
+// Function to calculate the grand total
+float grandTotalSales(float sales[][12], int row)
+{
+	float total = 0;
+	for (int x = 0; x < row; x++)
+	{
+		for (int y = 0; y < 12; y++)
+		{
+			total += sales[x][y];
+		}
+	}
+	return total;
+}
+
+// Function to find the highest sales 
+float highestSale(float sales[][12], string store[], string month[], int row, int &n, int &c)
+{	
+	float high = 0;
+	for (int x = 0; x < row; x++)
+	{
+		for (int y = 0; y < 12; y++)
+		{
+			if (sales[x][y] >= high)
+			{
+				high = sales[x][y];
+				n = x;
+				c = y;
+			}
+		}
+	}
+	return high;
+}
+
+// Function to find the lowest sales
+float lowestSale(float sales[][12], string store[], string month[], int row, int &i, int &j)
+{
+	float low = 9999999999;
+	for (int x = 0; x < row; x++)
+	{
+		for (int y = 0; y < 12; y++)
+		{
+			if (sales[x][y] <= low)
+			{
+				low = sales[x][y];
+				i = x;
+				j = y;
+			}
+		}
+	}
+	return low;
+}
+
+// Function to calculate total monthly sales for each month
+float totalMonthly (float sales[][12], int x, int row)
+{
+	float total = 0;
+	for (int y = 0; y < row; y++)
+	{
+		total += sales[y][x];
+	}
+	return total;
+}
+
+// Function to calculate total annual sales for each store
+int totalStores(float sales[][12], float storeAnn[], int row)
+{
+	for (int x = 0; x < row; x++)
+	{
+		for (int y = 0; y < 12; y++)
+		{
+			storeAnn[x] += sales[x][y];
+		}
+	}
+	return row;
+}
+
+					</code>
+				</pre>
+			</div>
+		</div>
+		<hr />
+
+					<h2>Summary</h2>
+					<blockquote>Dr. Eiliyah @ Wong Yee Leng taught this topic. As a foundational subject, this course provides students with both theory and application in methods for problem-solving using a structured approach. Students are needed to create programming in the C++ programming language to tackle easy to moderate challenges. The course covers the following topics: pre-processor guidance, parameters and elements, data types, input and output statements, control structures which include sequential, selection, and loop, built-in and user-defined functions, single and two-dimensional arrays, file operations, pointers, and structured data types.</blockquote>
+					<hr />
+
+					<ul class="actions small">
+						<li><a href="ds.html" class="button primary small">SECI1013</a></li>
+						<li><a href="dl.html" class="button primary small">SECR1013</a></li>
+						<li><a href="tis.html" class="button primary small">SECP1513</a></li>
+						<li><a href="jd.html" class="button primary small">ULRS1032</a></li>
+					</ul>
+				</section>
+			</div>
+	
+		</div>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>&copy; <a href="https://html5up.net">HTML5 UP</a></li><li>Design: </li> Adriana Jefri</ul>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/prism.js"></script>
+
+	</body>
+</html>
