@@ -1,0 +1,15 @@
+1. a) show top 5 categories of movie (Movie.xlsx) and the sum_total (10marks)
+b) how many title are duplicate (3 marks)
+
+2. the dataset (airport elevation.xlsx) contains information on airport elevation across the country
+a) show all types of airports and the distinct values (number of records) (3marks)
+b) how many states exist in the dataset and which one has the highest records? (2marks)
+c) examining only airports of the type "heliport" or "seaplane_base", what state has the lowest average elevation of these airports?
+
+3. the dataset (food rating.xlsx) contains reviews of ramen.
+a) generate a report that shows a product that was reviewed at 4-stars or higher by country and brand with at least 10 varieties.
+b) how many brands from Malaysia that were reviewed less than 3-stars? 3marks
+
+4. the dataset (production by itemcode) contains information of type of production & the value per year from 1987 to 2013
+a) load all data (45 sheets) using only one input tool (use dynamic input) 
+b) identify and show the top item produced by each country based on the total production values

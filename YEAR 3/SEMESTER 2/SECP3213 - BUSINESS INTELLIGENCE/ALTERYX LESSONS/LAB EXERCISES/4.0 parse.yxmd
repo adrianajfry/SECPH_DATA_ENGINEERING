@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_*.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ORDERS_*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Order ID" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Order Date" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Ship Date" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Ship Mode" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Customer Name" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Segment" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Country/Region" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="City" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="State" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Postal Code" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Region" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Category" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Sub-Category" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Product Name" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Sales" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Quantity" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Discount" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Profit" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+            <Field name="Days to Ship Scheduled" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="150" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+          <TempFile>C:\Users\Asus\AppData\Local\Temp\Alteryx\Engine_6596_16e159771ee84838b32f2b8882a2e60f_\Engine_6596_aae2ec4d13484cf0ab1808f52acb1d28~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="186" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="False" />
+          <RemoveNullColumns value="False" />
+          <RemoveTabsLineBreaksAndDuplicates value="False" />
+          <RemoveLeadingAndTrailingWhitespace value="True" />
+          <RemoveAllWhitespaces value="False" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="Category" selected="True" />
+            <Field value="City" selected="True" />
+            <Field value="Country/Region" selected="True" />
+            <Field value="Customer Name" selected="True" />
+            <Field value="Discount" selected="True" />
+            <Field value="Order ID" selected="True" />
+            <Field value="Postal Code" selected="True" />
+            <Field value="Product Name" selected="True" />
+            <Field value="Profit" selected="True" />
+            <Field value="Quantity" selected="True" />
+            <Field value="Region" selected="True" />
+            <Field value="Sales" selected="True" />
+            <Field value="Segment" selected="True" />
+            <Field value="Ship Mode" selected="True" />
+            <Field value="State" selected="True" />
+            <Field value="Sub-Category" selected="True" />
+            <Field value="OrderDate" selected="True" />
+            <Field value="ShipDate" selected="True" />
+            <Field value="Days to Ship Scheduled" selected="True" />
+            <Field value="*Unknown" selected="True" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="False" />
+          <Checkbox_ReplaceNumericColumns value="False" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="False" />
+          <ReplaceWithZero value="False" />
+          <CheckBox_ModifyCase value="False" />
+          <ModifyCase value="none" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="294" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Order Date</InputFieldName>
+          <Language>English</Language>
+          <Format>dd/MM/yyyy hh:mm:ss</Format>
+          <OutputFieldName>OrderDate</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Order Date From:
+dd/MM/yyyy hh:mm:ss</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="414" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Ship Date</InputFieldName>
+          <Language>English</Language>
+          <Format>dd/MM/yyyy hh:mm:ss</Format>
+          <OutputFieldName>ShipDate</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Ship Date From:
+dd/MM/yyyy hh:mm:ss</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="510" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>4.0 parse</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="29a728f5-5ef9-465c-9e54-4765b195bda8" />
+      <Telemetry>
+        <PreviousWorkflowId value="6d376804-6843-4e3b-875c-1a6301779af2" />
+        <OriginWorkflowId value="6d376804-6843-4e3b-875c-1a6301779af2" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

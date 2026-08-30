@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="258" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+          <TempFile>C:\Users\Asus\AppData\Local\Temp\Alteryx\Engine_3452_a3e0b12a70b949f39311f6cc838710e2_\Engine_3452_19decfcf9603413992a738aa6fa618a7~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_*.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ORDER_*.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Category" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Country/Region" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Discount" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Order ID" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Postal Code" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Product Name" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_WString" />
+            <Field name="Profit" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Quantity" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Region" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Sales" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Segment" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Ship Mode" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Sub-Category" size="255" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="OrderDate" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="Date" />
+            <Field name="ShipDate" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="Date" />
+            <Field name="Days to Ship Scheduled" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>read multiple files</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="14cb7dfc-c2df-440b-8b6e-a8db2baa8dcf" />
+      <Telemetry>
+        <PreviousWorkflowId value="e1446d8e-fcf6-4a2b-81e4-248c83f9cf95" />
+        <OriginWorkflowId value="e1446d8e-fcf6-4a2b-81e4-248c83f9cf95" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

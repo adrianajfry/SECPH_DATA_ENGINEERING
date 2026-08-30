@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="366" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <AutoResetMode>Custom</AutoResetMode>
+          <MultiMetaInfo>
+            <MetaInfo name="#1">
+              <RecordInfo />
+            </MetaInfo>
+            <MetaInfo name="#2">
+              <RecordInfo>
+                <Field name="Category" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="1" />
+                <Field name="City" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="2" />
+                <Field name="Country/Region" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="3" />
+                <Field name="Customer Name" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="4" />
+                <Field name="Discount" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="Double" column="5" />
+                <Field name="Order ID" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="6" />
+                <Field name="Postal Code" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="7" />
+                <Field name="Product Name" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="8" />
+                <Field name="Profit" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="Double" column="9" />
+                <Field name="Quantity" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="Byte" column="10" />
+                <Field name="Region" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="11" />
+                <Field name="Sales" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="Double" column="12" />
+                <Field name="Segment" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="13" />
+                <Field name="Ship Mode" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="14" />
+                <Field name="State" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="15" />
+                <Field name="Sub-Category" size="254" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="V_String" column="16" />
+                <Field name="Order Date" source="DateTime: To dd/MM/yyyy" type="Date" column="17" />
+                <Field name="Ship Date" source="DateTime: To dd/MM/yyyy" type="Date" column="18" />
+                <Field name="Days to Ship Scheduled" source="File: C:\Users\USER\Desktop\UTM\UTM SEM 6\BI\Dataset\ORDERS_2020.csv" type="Byte" column="19" />
+              </RecordInfo>
+            </MetaInfo>
+          </MultiMetaInfo>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ManualDelayed</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Asus\Downloads\BI Lab 1 Dataset\SUPERSTORE ORDERS_20162019.xlsx|||&lt;List of Sheet Names&gt;</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>SUPERSTORE ORDERS_20162019.xlsx
+Query=&lt;List of Sheet Names&gt;</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sheet Names" size="31" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\SUPERSTORE ORDERS_20162019.xlsx|||&lt;List of Sheet Names&gt;" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+        <Position x="210" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputConfiguration>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDER_2016.xlsx|||`Sheet1$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+          </InputConfiguration>
+          <Mode>ReadList</Mode>
+          <ReadList_Field>Sheet Names</ReadList_Field>
+          <ReadList_Type>Prefix</ReadList_Type>
+          <ErrorBehaviour>Error</ErrorBehaviour>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="485" y="29" width="565" height="240" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>3.2 preparation</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>3.2 preparation</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="630" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeDiff([Ship Date],[Order Date],'day')" field="Day to ship" size="2" type="Int16" enabled="true" />
+                <FormulaField expression="IF [Day to ship] = [Days to Ship Scheduled] THEN &quot;Shipped On Time&quot;&#xA;ELSEIF [Day to ship] &gt; [Days to Ship Scheduled] THEN &quot;Shipped Late&quot;&#xA;ELSE &quot;Shipped Early&quot;&#xA;ENDIF&#xA;&#xA;" field="Ship Status" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Day to ship = DateTimeDiff([Ship Date],[Order Date],'day')
+Ship Status = IF [Day...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings>
+            <Position x="510" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="listbox Select Incoming Fields">"Days to Ship Scheduled"</Value>
+              <Value name="radio Null Value">True</Value>
+              <Value name="radio User Specified Replace From Value">False</Value>
+              <Value name="updown User Replace Value">0.00000</Value>
+              <Value name="radio Mean">False</Value>
+              <Value name="radio Median">True</Value>
+              <Value name="radio Mode">False</Value>
+              <Value name="radio User Specified Replace With Value">False</Value>
+              <Value name="updown User Replace With Value">0.00000</Value>
+              <Value name="checkbox Impute Indicator">False</Value>
+              <Value name="checkbox Imputed Values Separate Field">False</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Category" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="City" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Country/Region" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Customer Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Discount" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Order ID" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Postal Code" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Product Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Profit" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Quantity" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Region" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Sales" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Segment" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Ship Mode" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="State" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Sub-Category" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Order Date" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Ship Date" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="Days to Ship Scheduled" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Imputation_v3.yxmc" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="750" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Day to ship" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Day to ship - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+            <Position x="882" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>First</Mode>
+              <N>1</N>
+              <GroupFields orderChanged="False">
+                <Field name="City" />
+              </GroupFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="966" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="City" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="137" y="317" width="565" height="266" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>4.0 parse</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>4.0 parse</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="162" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_*.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>ORDERS_*.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Row ID" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Order ID" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Order Date" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Ship Date" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Ship Mode" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Customer Name" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Segment" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Country/Region" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="City" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="State" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Postal Code" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Region" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Category" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Sub-Category" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Product Name" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Sales" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Quantity" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Discount" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Profit" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+                <Field name="Days to Ship Scheduled" size="254" source="File: C:\Users\Asus\Downloads\BI Lab 1 Dataset\ORDERS_2020.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="258" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+              <TempFile>C:\Users\Asus\AppData\Local\Temp\Alteryx\Engine_8224_4f2f4ca864ee4cdbad84f45f5af68688_\Engine_8224_fedc2d05179244ae970a72cac63fc36a~.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+            <Position x="294" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <RemoveNullRows value="False" />
+              <RemoveNullColumns value="False" />
+              <RemoveTabsLineBreaksAndDuplicates value="False" />
+              <RemoveLeadingAndTrailingWhitespace value="True" />
+              <RemoveAllWhitespaces value="False" />
+              <RemoveHTMLTags value="False" />
+              <RemoveInvisibleCharacters value="False" />
+              <Fields>
+                <Field value="Category" selected="True" />
+                <Field value="City" selected="True" />
+                <Field value="Country/Region" selected="True" />
+                <Field value="Customer Name" selected="True" />
+                <Field value="Discount" selected="True" />
+                <Field value="Order ID" selected="True" />
+                <Field value="Postal Code" selected="True" />
+                <Field value="Product Name" selected="True" />
+                <Field value="Profit" selected="True" />
+                <Field value="Quantity" selected="True" />
+                <Field value="Region" selected="True" />
+                <Field value="Sales" selected="True" />
+                <Field value="Segment" selected="True" />
+                <Field value="Ship Mode" selected="True" />
+                <Field value="State" selected="True" />
+                <Field value="Sub-Category" selected="True" />
+                <Field value="OrderDate" selected="True" />
+                <Field value="ShipDate" selected="True" />
+                <Field value="Days to Ship Scheduled" selected="True" />
+                <Field value="*Unknown" selected="True" />
+              </Fields>
+              <RemoveLetters value="False" />
+              <RemoveNumbers value="False" />
+              <RemovePunctuation value="False" />
+              <Letters value="" />
+              <Numbers value="" />
+              <Punctuations value="" />
+              <Exceptions value="" />
+              <Checkbox_ReplaceStringColumns value="False" />
+              <Checkbox_ReplaceNumericColumns value="False" />
+              <radioButton_ReplaceNullwithBlanks value="True" />
+              <radioButton_ReplaceBlankswithNulls value="False" />
+              <radioButton_ReplaceNullwithZero value="True" />
+              <radioButton_ReplaceZerowithNulls value="False" />
+              <ReplaceWithBlanks value="False" />
+              <ReplaceWithZero value="False" />
+              <CheckBox_ModifyCase value="False" />
+              <ModifyCase value="none" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+            <Position x="402" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <IsFrom value="False" />
+              <InputFieldName>Order Date</InputFieldName>
+              <Language>English</Language>
+              <Format>dd/MM/yyyy hh:mm:ss</Format>
+              <OutputFieldName>OrderDate</OutputFieldName>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Convert Order Date From:
+dd/MM/yyyy hh:mm:ss</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+            <Position x="522" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <IsFrom value="False" />
+              <InputFieldName>Ship Date</InputFieldName>
+              <Language>English</Language>
+              <Format>dd/MM/yyyy hh:mm:ss</Format>
+              <OutputFieldName>ShipDate</OutputFieldName>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Convert Ship Date From:
+dd/MM/yyyy hh:mm:ss</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="618" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>exercise 2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="2c88f48a-a6c2-476f-9537-1a06dcfaa5ca" />
+      <Telemetry>
+        <PreviousWorkflowId value="3d4d03a2-a6ce-42a9-a852-9631650b6456" />
+        <OriginWorkflowId value="3d4d03a2-a6ce-42a9-a852-9631650b6456" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
