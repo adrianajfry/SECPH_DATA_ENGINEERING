@@ -1,0 +1,9 @@
+Group Name: nemesis
+
+This is File Manipulation Activity
+Let's practice string manipulation
+THIS LINE SHOULD BE ALL CAPITAL LETTERS
+this line should be all small letters
+This line contains only alphabetic characters.
+All alphabetic characters in this line are lowercase.
+That's the end. Thank youuu
