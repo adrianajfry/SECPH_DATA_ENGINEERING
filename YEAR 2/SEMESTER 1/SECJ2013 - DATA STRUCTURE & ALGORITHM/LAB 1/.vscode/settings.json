@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "iostream": "cpp",
-        "string": "cpp",
-        "istream": "cpp",
-        "cmath": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Disabled"
-}
