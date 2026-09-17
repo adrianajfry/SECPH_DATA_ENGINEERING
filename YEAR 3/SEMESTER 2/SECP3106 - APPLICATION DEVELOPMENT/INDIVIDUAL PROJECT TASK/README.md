@@ -1,4 +1,4 @@
-# Resto Order — Restaurant Waiter Order System
+# 🍽️📝Resto Order — Restaurant Waiter Order System
 
 A CRUD-based Flutter mobile app that lets a restaurant waiter manage the menu and take customer orders, with a full order lifecycle backed by a real cloud database (Supabase/PostgreSQL). Built as an individual test project for Application Development (SECP3106).
 
